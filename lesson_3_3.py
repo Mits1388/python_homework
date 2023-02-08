@@ -4,12 +4,7 @@
 from pprint import pprint
 
 numbers = int(input('Enter number: '))
-
-list_name = [input(f'name {i+1}: ') for i in range(numbers)]
-print(list_name)
-list_email = [input(f'email {j+1}: ') for j in range(numbers)]
-print(list_email)
-users = {k: {'name': list_name[k], 'email': list_email[k]} for k in range(numbers)}
+users = {k: {'name': input(f'name {k+1}: '), 'email': input(f'email {k+1}: ')} for k in range(numbers)}
 pprint(users)
 
 # user = {
