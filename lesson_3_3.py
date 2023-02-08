@@ -4,7 +4,7 @@
 from pprint import pprint
 
 number = int(input('Enter number: '))
-users = {k: {'name': input(f'name {k+1}: '), 'email': input(f'email {k+1}: ')} for k in range(number)}
+users = {i: {'name': input(f'name {i+1}: '), 'email': input(f'email {i+1}: ')} for i in range(number)}
 pprint(users)
 
 # user = {
