@@ -1,16 +1,22 @@
 # Сделать калькулятор: у пользователя
 # спрашивается число, потом действие и второе
 # число
-number_one = int(input('Enter number one: '))
-action = input('Enter action: ')
-number_two = int(input('Enter number two: '))
-if action == '+':
-    print(number_one + number_two)
-elif action == '-':
-    print(number_one - number_two)
-elif action == '*':
-    print(number_one * number_two)
-elif action == '/':
-    print(round(number_one / number_two, 1))
-else:
-    print('it is a simple calculator only +, -, *, /')
+try:
+    a = int(input('Enter number one: '))
+    action = input('Enter action: ')
+    b = int(input('Enter number two: '))
+    if action == '+':
+        print(f'{a} + {b} =', a + b)
+    elif action == '-':
+        print(f'{a} - {b} =', a - b)
+    elif action == '*':
+        print(f'{a} * {b} =', a * b)
+    elif action == '/':
+        try:
+            print(f'{a} / {b} =', round(a / b, 2))
+        except ZeroDivisionError as e:
+            print('Can`t be divided by zero')
+    else:
+        print('Invalid action')
+except ValueError as e:
+    print('Invalid value')
