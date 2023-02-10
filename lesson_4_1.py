@@ -1,5 +1,4 @@
 # Вывести первые N цисел кратные M и больше K
-
 n = int(input('Enter N: '))
 m = int(input('Enter M: '))
 k = int(input('Enter K: '))
