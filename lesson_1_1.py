@@ -1,6 +1,6 @@
 # Сделайте так, чтобы число секунд отображалось в виде дни: часы: минуты: секунды:
 try:
-    number = int(input('Enter number: '))
+    number = int(input('Enter seconds: '))
     remainder_of_second = number % 60
     minute = (number - remainder_of_second) / 60
     remainder_of_minute = minute % 60
