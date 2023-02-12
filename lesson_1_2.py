@@ -11,6 +11,6 @@ for i in string.punctuation:
     if i in text:
         text = text.replace(i, '')
 word_list = text.split(' ')
-often_word, count = max(Counter(word_list).items(), key=lambda n: n[::-1])
+often_word, count = max(Counter(word_list).items(), key=lambda j: j[::-1])
 long_word = max(word_list, key=len)
 print(f'often word - {often_word}\nlong word - {long_word}')
