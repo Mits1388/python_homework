@@ -4,8 +4,8 @@ import random
 
 n = int(input('Enter N: '))
 list_random = [random.randint(0, 100) for i in range(0, 10)]
-print(list_random)
+print(f'Without shift:{list_random}')
 
 list_shift = list_random[n:]+list_random[:n]
-print(list_shift)
+print(f'   With shift:{list_shift}')
 
