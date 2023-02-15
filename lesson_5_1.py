@@ -4,7 +4,7 @@
 decimal_number = int(input('Enter decimal number: '))
 b = ''
 while decimal_number > 0:
-    b = str(decimal_number % 2)+b
+    b = str(decimal_number % 2) + b
     decimal_number //= 2
 print(f'Binary number = {b}')
 
