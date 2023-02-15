@@ -10,11 +10,11 @@ morse_dict = {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '.
               '2': '..---', '3': '...--', '4': '....-', '5': '.....', '6': '-....', '7': '--...',
               '8': '---..', '9': '----.'}
 
-result = []
+morse = []
 
 for i in text.upper().split(' '):
     list_text = []
     for j in i:
         list_text.append(morse_dict[j])
-    result.append(' '.join(list_text))
-print('    '.join(result))
+    morse.append(' '.join(list_text))
+print('    '.join(morse))
