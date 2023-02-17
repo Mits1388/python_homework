@@ -18,6 +18,6 @@ for i, j in dictionary.items():
     for k, v in j.items():
         if k == 'email':
             if j[k] == '':
-                print(j.get('first name'))
+                print(j.get('first name') + ' doesn`t have an email')
     if key not in j:
-        print(j.get('first name'))
+        print(j.get('first name') + ' doesn`t have an email')
