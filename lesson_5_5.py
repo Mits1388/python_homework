@@ -7,11 +7,15 @@ print(f' No:{list_random}')
 
 
 def is_turn(any_list):
-    for i in range(len(list_random)):
-        for j in range(len(list_random) - i):
-            buff = list_random[i]
-            list_random[i] = list_random[i + j]
-            list_random[i + j] = buff
+    j = len(any_list)-1
+    for i in range(int(len(any_list)/2)):
+        any_list[i], any_list[j] = any_list[j], any_list[i]
+        j -= 1
+    # for i in range(len(list_random)):
+    #     for j in range(len(list_random) - i):
+    #         buff = list_random[i]
+    #         list_random[i] = list_random[i + j]
+    #         list_random[i + j] = buff
     return any_list
 
 
