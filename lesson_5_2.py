@@ -10,11 +10,18 @@ morse_dict = {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '.
               '2': '..---', '3': '...--', '4': '....-', '5': '.....', '6': '-....', '7': '--...',
               '8': '---..', '9': '----.'}
 
-morse = []
+string = ''
 
-for i in text.upper().split(' '):
-    list_text = []
-    for j in i:
-        list_text.append(morse_dict[j])
-    morse.append(' '.join(list_text))
-print('    '.join(morse))
+for i in text.upper():
+    if i in morse_dict:
+        string += morse_dict[i]
+print(string)
+
+
+# morse = []
+# for i in text.upper().split(' '):
+#     list_text = []
+#     for j in i:
+#         list_text.append(morse_dict[j])
+#     morse.append(' '.join(list_text))
+# print('    '.join(morse))
