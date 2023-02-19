@@ -7,9 +7,9 @@ list_random = [random.randint(0, 100) for i in range(0, 10)]
 print(f'Without shift:{list_random}')
 
 
-def is_shift(any_list):
+def shift(any_list):
     list_shift = list_random[n:] + list_random[:n]
     return list_shift
 
 
-print(f'   With shift:{is_shift(list_random)}')
+print(f'   With shift:{shift(list_random)}')
