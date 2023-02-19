@@ -6,7 +6,7 @@ list_random = [random.randint(0, 100) for i in range(0, 10)]
 print(list_random)
 
 
-def is_sorted(any_list):
+def list_sorted(any_list):
     a = []
     b = []
     for i in range(len(any_list)):
@@ -17,4 +17,4 @@ def is_sorted(any_list):
     return sorted(a) + sorted(b)
 
 
-print(is_sorted(list_random))
+print(list_sorted(list_random))
