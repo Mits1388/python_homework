@@ -6,7 +6,7 @@ list_random = [random.randint(0, 100) for i in range(0, 10)]
 print(f' No:{list_random}')
 
 
-def is_turn(any_list):
+def turn(any_list):
     j = len(any_list)-1
     for i in range(int(len(any_list)/2)):
         any_list[i], any_list[j] = any_list[j], any_list[i]
@@ -19,4 +19,4 @@ def is_turn(any_list):
     return any_list
 
 
-print(f'Yes:{is_turn(list_random)}')
+print(f'Yes:{turn(list_random)}')
