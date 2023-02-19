@@ -4,7 +4,7 @@
 decimal_number = int(input('Enter decimal number: '))
 
 
-def is_convert_bin(number):
+def convert_bin(number):
     b = ''
     while number > 0:
         b = str(number % 2) + b
@@ -12,12 +12,12 @@ def is_convert_bin(number):
     return b
 
 
-print(f'Binary number = {is_convert_bin(decimal_number)}')
+print(f'Binary number = {convert_bin(decimal_number)}')
 
 binary_number = input('Enter binary number: ')
 
 
-def is_convert_dec(number):
+def convert_dec(number):
     a = []
     n = 1
     for i in reversed(number):
@@ -26,4 +26,4 @@ def is_convert_dec(number):
     return sum(a)
 
 
-print(f'Decimal number: {is_convert_dec(binary_number)}')
+print(f'Decimal number: {convert_dec(binary_number)}')
