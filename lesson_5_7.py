@@ -6,11 +6,16 @@ import random
 list_random = [random.randint(0, 5) for i in range(0, 5)]
 
 print(f'Random list: {list_random}')
-a = []
-for i in range(len(list_random)):
-    if i != len(list_random)-1:
-        a.append(list_random[i+1]+list_random[i-1])
-    else:
-        a.append(list_random[i-1]+list_random[0])
 
-print(f'Sum of neighboring elements: {a}')
+
+def sum_of_neighbors(any_list):
+    a = []
+    for i in range(len(any_list)):
+        if i != len(any_list) - 1:
+            a.append(any_list[i + 1] + any_list[i - 1])
+        else:
+            a.append(any_list[i - 1] + any_list[0])
+    return a
+
+
+print(f'Sum of neighboring elements: {sum_of_neighbors(list_random)}')
