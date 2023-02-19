@@ -12,13 +12,13 @@ dictionary = {
 name_city = input('Enter city: ')
 
 
-def is_country(any_dictionary):
+def country(any_dictionary):
     for i, j in dictionary.items():
         if name_city in j:
             return i
 
 
-print(f'This city is in {is_country(dictionary)}')
+print(f'This city is in {country(dictionary)}')
 
 #
 # for i, j in dictionary.items():
