@@ -10,13 +10,16 @@ morse_dict = {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '.
               '2': '..---', '3': '...--', '4': '....-', '5': '.....', '6': '-....', '7': '--...',
               '8': '---..', '9': '----.'}
 
-string = ''
 
-for i in text.upper():
-    if i in morse_dict:
-        string += morse_dict[i]
-print(string)
+def translation_morse(any_text):
+    string = ''
+    for i in text.upper():
+        if i in morse_dict:
+            string += morse_dict[i]
+    return string
 
+
+print(translation_morse(text))
 
 # morse = []
 # for i in text.upper().split(' '):
