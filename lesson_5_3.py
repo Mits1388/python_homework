@@ -6,6 +6,10 @@ n = int(input('Enter N: '))
 list_random = [random.randint(0, 100) for i in range(0, 10)]
 print(f'Without shift:{list_random}')
 
-list_shift = list_random[n:]+list_random[:n]
-print(f'   With shift:{list_shift}')
 
+def is_shift(any_list):
+    list_shift = list_random[n:] + list_random[:n]
+    return list_shift
+
+
+print(f'   With shift:{is_shift(list_random)}')
