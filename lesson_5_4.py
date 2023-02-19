@@ -6,7 +6,7 @@
 list_types = [77, 'hello', 45, 54, 'world', 4.4, None]
 
 
-def is_type(any_types):
+def different_type(any_types):
     a = []
     for i in any_types:
         if isinstance(i, str):
@@ -14,4 +14,4 @@ def is_type(any_types):
     return a
 
 
-print(is_type(list_types))
+print(different_type(list_types))
