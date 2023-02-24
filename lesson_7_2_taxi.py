@@ -16,22 +16,28 @@ class Car:
         self.is_baby_seat = is_baby_seat
         self.is_busy = is_busy
 
+    def __str__(self):
+        return f'Car {self.color = }; {self.count_passenger_seats = }; ' \
+               f'{self.is_baby_seat = }; {self.is_busy = }'
 
-class Taxi(Car):
-    cars = []
 
-    def __init__(self, color, count_passenger_seats, is_baby_seat, is_busy):
-        super().__init__(color, count_passenger_seats, is_baby_seat, is_busy)
-        Taxi.cars.append(self)
+class Taxi:
+
+    def __init__(self):
+        self.cars = []
 
     def __str__(self):
-        return "{} {} {} {}".format(self.color, self.count_passenger_seats, self.is_baby_seat, self.is_busy)
+        print(f'{self.cars[0]}')
+
+    def add_car(self, car):
+        self.cars.append(car)
 
 
-bmw = Taxi('red', 2, True, True)
-audi = Taxi('white', 4, False, True)
-mazda = Taxi('black', 4, True, False)
-volvo = Taxi('blue', 4, False, False)
+bmw = Car('red', 2, True, True)
+mazda = Car('white', 4, False, False)
 
-for i in Taxi.cars:
-    print(i)
+taxi = Taxi()
+taxi.add_car(bmw)
+taxi.add_car(mazda)
+
+taxi.__str__()
