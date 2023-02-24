@@ -27,7 +27,10 @@ class Taxi:
         self.cars = []
 
     def __str__(self):
-        print(f'{self.cars[0]}')
+        i = 0
+        while i != len(taxi.cars):
+            print(f'{self.cars[i]}')
+            i += 1
 
     def add_car(self, car):
         self.cars.append(car)
