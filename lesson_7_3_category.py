@@ -56,8 +56,10 @@ class Category:
 
 
 category = Category()
-print(category.add('car'))
-print(category.get(5))
-category.delete(1)
-print(category.categories)
-print(category.update(2, 'taxi'))
+print(f'Method of adding - {category.add("car")}')
+print(f'Method of getting - {category.get(5)}')
+print(f'Before deleting the index - {category.categories}')
+category.delete(4)
+print(f'After deleting the index - {category.categories}')
+print(f'After updating - {category.update(2, "taxi")}')
+
