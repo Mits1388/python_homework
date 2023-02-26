@@ -1,5 +1,5 @@
 # 3. Реализовать класс Category. Создать атрибут класса categories
-categories = ['bus', 'sports', 'electric', 'truck', 'taxi']
+categories = ['bus', 'sports', 'electric', 'truck', 'ambulance']
 
 
 class Category:
@@ -44,7 +44,15 @@ class Category:
     # на таком индексе, то новая категория должна добавляться с учетом того, что имена категорий уникальны,
     # если новое имя категории нарушает уникальность в списке категорий, вызвать исключение ValueError
     def update(self, index, new_category):
-
+        for i in self.categories:
+            if i == new_category:
+                raise ValueError('There is a category in the list')
+            else:
+                if new_category in self.categories:
+                    continue
+                else:
+                    self.categories.insert(index, new_category)
+                    return self.categories
 
 
 category = Category()
@@ -52,7 +60,4 @@ print(category.add('car'))
 print(category.get(5))
 category.delete(1)
 print(category.categories)
-
-
-
-# def update(self):
+print(category.update(2, 'taxi'))
