@@ -1,7 +1,7 @@
 # 4. Изменить класс Category из задачи 3, список категорий должен содержать не просто имена категорий, а
 # словари с данными о каждой категории (name: str, is_published: bool), а так же изменить
 # методы add, get, delete, update для работы с списком словарей
-categories = {
+dict_categories = {
     0: {'name': 'bus', 'is_published': False},
     1: {'name': 'sports', 'is_published': False},
     2: {'name': 'electric', 'is_published': True},
@@ -13,7 +13,7 @@ categories = {
 class Category:
     def __init__(self):
         # print('init')
-        self.categories = categories
+        self.categories = dict_categories
 
     def add(self, category_car):
         # print('add_categories')
