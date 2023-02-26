@@ -1,25 +1,47 @@
+# 3. Реализовать класс Category. Создать атрибут класса categories
+categories = ['bus', 'sports', 'electric', 'truck']
+
+
 class Category:
-    categories: str
 
-
-    def __init__(self, categories):
+    def __init__(self):
+        # print('init')
         self.categories = categories
 
-    def add_categories():
-        if category == None:
+# 3.1 Написать метод класса add принимающий на вход название категории, если такой категории в атрибуте класса categories
+# нет, добавить данную категорию в список и вернуть индекс вхождения новой категории в списке.Если такая категория уже
+# есть, вызвать исключение ValueError
+    def add(self, category_car):
+        # print('add_categories')
+        for i in self.categories:
+            if i == category_car:
+                raise ValueError('There is a category in the list')
+            else:
+                if category_car in self.categories:
+                    continue
+                else:
+                    self.categories.append(category_car)
+                    return self.categories
 
 
-        else:
-            try:
-            except ValueError as e:
-                print('ValueError exception')
+category = Category()
+print(category.add('buss'))
+
+# print(category.categories)
+
+# cat = Category()
+# Category.add_categories('Bus')
 
 
-    def get_categories(self):
+# else:
+#     try:
+#     except ValueError as e:
+#         print('ValueError exception')
 
 
-    def delete_categories(self):
-
-    def update(self):
-
-
+# def get_categories(self):
+#
+#
+# def delete_categories(self):
+#
+# def update(self):
