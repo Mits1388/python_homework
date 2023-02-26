@@ -1,5 +1,5 @@
 # 3. Реализовать класс Category. Создать атрибут класса categories
-categories = ['bus', 'sports', 'electric', 'truck']
+categories = ['bus', 'sports', 'electric', 'truck', 'taxi']
 
 
 class Category:
@@ -8,9 +8,9 @@ class Category:
         # print('init')
         self.categories = categories
 
-# 3.1 Написать метод класса add принимающий на вход название категории, если такой категории в атрибуте класса categories
-# нет, добавить данную категорию в список и вернуть индекс вхождения новой категории в списке.Если такая категория уже
-# есть, вызвать исключение ValueError
+    # 3.1 Написать метод класса add принимающий на вход название категории, если такой категории в атрибуте класса
+    # categories нет, добавить данную категорию в список и вернуть индекс вхождения новой категории в списке.
+    # Если такая категория уже есть, вызвать исключение ValueError
     def add(self, category_car):
         # print('add_categories')
         for i in self.categories:
@@ -21,27 +21,38 @@ class Category:
                     continue
                 else:
                     self.categories.append(category_car)
-                    return self.categories
+                    return f'index {self.categories.index(category_car)}'
+
+    # 3.2 Написать метод класса get принимающий индекс и возвращающий категорию из списка категорий на этом индексе,
+    # если нет элемента на таком индексе, вызвать исключение IndexError
+    def get(self, index):
+        for i in self.categories:
+            if self.categories.index(i) == index:
+                return i
+        else:
+            raise IndexError('No such index in the list')
+
+    # 3.3 Написать метод класса delete принимающий индекс категории в списке категорий и удаляющий элемент из
+    # списка категорий на этом индексе, если нет элемента на таком индексе, ничего не делать,
+    # метод ничего возвращать не должен
+    def delete(self, index):
+        for i in self.categories:
+            if self.categories.index(i) == index:
+                self.categories.remove(i)
+
+    # 3.4 Написать метод класса update принимающий индекс категорий и новое название категории, если нет элемента
+    # на таком индексе, то новая категория должна добавляться с учетом того, что имена категорий уникальны,
+    # если новое имя категории нарушает уникальность в списке категорий, вызвать исключение ValueError
+    def update(self, index, new_category):
+
 
 
 category = Category()
-print(category.add('buss'))
-
-# print(category.categories)
-
-# cat = Category()
-# Category.add_categories('Bus')
+print(category.add('car'))
+print(category.get(5))
+category.delete(1)
+print(category.categories)
 
 
-# else:
-#     try:
-#     except ValueError as e:
-#         print('ValueError exception')
 
-
-# def get_categories(self):
-#
-#
-# def delete_categories(self):
-#
 # def update(self):
