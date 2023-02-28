@@ -53,12 +53,12 @@ class Category:
     # 4.1 Добавить метод make_published принимающий индекс категории и меняющий значение
     # ключа is_published на True, если такого индекса нет, вызвать исключение IndexError
     def make_published(self, index):
-        return
+        pass
 
     # 4.2 Добавить метод make_unpublished принимающий индекс категории и меняющий
     # значение ключа is_published на False, если такого индекса нет, вызвать исключение IndexError
     def make_unpublished(self, index):
-        return
+        pass
 
 
 category = Category()
