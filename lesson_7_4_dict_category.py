@@ -2,19 +2,26 @@
 # словари с данными о каждой категории (name: str, is_published: bool), а так же изменить
 # методы add, get, delete, update для работы с списком словарей
 
-dict_categories = {
-    0: {'name': 'bus', 'is_published': True},
-    1: {'name': 'sports', 'is_published': True},
-    2: {'name': 'electric', 'is_published': True},
-    3: {'name': 'truck', 'is_published': False},
-    4: {'name': 'ambulance', 'is_published': True}
-}
+# dict_categories = {
+#     0: {'name': 'bus', 'is_published': True},
+#     1: {'name': 'sports', 'is_published': True},
+#     2: {'name': 'electric', 'is_published': False},
+#     3: {'name': 'truck', 'is_published': False},
+#     4: {'name': 'ambulance', 'is_published': True}
+# }
 
 
 class Category:
+    dict_categories = {
+        0: {'name': 'bus', 'is_published': True},
+        1: {'name': 'sports', 'is_published': True},
+        2: {'name': 'electric', 'is_published': False},
+        3: {'name': 'truck', 'is_published': False},
+        4: {'name': 'ambulance', 'is_published': True}
+    }
 
-    def __init__(self):
-        self.dict_categories = dict_categories
+    # def __init__(self):
+    #     self.dict_categories = dict_categories
 
     def add(self, category_car, is_published):
         for i, j in self.dict_categories.items():
@@ -53,12 +60,24 @@ class Category:
     # 4.1 Добавить метод make_published принимающий индекс категории и меняющий значение
     # ключа is_published на True, если такого индекса нет, вызвать исключение IndexError
     def make_published(self, index):
-        pass
+        for i, j in self.dict_categories.items():
+            if index > len(self.dict_categories):
+                raise IndexError('There is an index in the list')
+            else:
+                if i == index:
+                    if not j['is_published']:
+                        j['is_published'] = True
 
     # 4.2 Добавить метод make_unpublished принимающий индекс категории и меняющий
     # значение ключа is_published на False, если такого индекса нет, вызвать исключение IndexError
     def make_unpublished(self, index):
-        pass
+        for i, j in self.dict_categories.items():
+            if index > len(self.dict_categories):
+                raise IndexError('There is an index in the list')
+            else:
+                if i == index:
+                    if j['is_published']:
+                        j['is_published'] = False
 
 
 category = Category()
@@ -68,9 +87,7 @@ print(f'Before deleting the index - {category.dict_categories}')
 category.delete(3)
 print(f'After deleting the index - {category.dict_categories}')
 print(f'After updating - {category.update(3, "taxi")}')
-
-# 0: {'name': 'bus', 'is_published': False},
-# 1: {'name': 'sports', 'is_published': False},
-# 2: {'name': 'electric', 'is_published': True},
-# 3: {'name': 'truck', 'is_published': False},
-# 4: {'name': 'ambulance', 'is_published': True}
+category.make_published(2)
+print(f'After published - {category.dict_categories}')
+category.make_unpublished(2)
+print(f'After unpublished - {category.dict_categories}')
