@@ -1,0 +1,7 @@
+id;name;user_id;status_id;email;order_id;product_id;title;description;category_id
+1;Ashley;10;100;ashley@gmail.com;110;120;user one;man;1000
+2;Wendy;20;200;wendy@gmail.com;210;220;user two;woman;2000
+3;Calvin;30;300;calvin@gmail.com;310;320;user three;man;3000
+4;Viola;40;400;viola@gmail.com;410;420;user four;woman;4000
+5;David;50;500;david@gmail.com;510;520;user five;man;5000
+6;Juliet;60;600;juliet@gmail.com;610;620;user six;woman;6000
