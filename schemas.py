@@ -3,41 +3,42 @@ from pydantic import BaseModel
 
 class Base(BaseModel):
     pass
+    # id: int
 
 
 class OrderItems(Base):
     id: int
-    order_id: int
-    product_id: int
+    orders_id: int
+    products_id: int
 
 
 class Orders(OrderItems):
     id: int
-    user_id: int
-    status_id: int
+    users_id: int
+    statuses_id: int
 
 
 class Statuses(Orders):
-    id: int
+    # id: int
     name: str
 
 
 class Users(Orders):
-    id: int
+    # id: int
     name: str
     email: str
 
 
 class Products(OrderItems):
-    id: int
+    # id: int
     title: str
     description: str
     category_id: int
 
 
 class Categories(Products):
-    id: int
+    # id: int
     name: str
 
-    class Config:
-        orm_mode = True
+    # class Config:
+    #     orm_mode = True

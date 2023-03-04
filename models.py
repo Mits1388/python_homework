@@ -4,10 +4,11 @@ from sqlalchemy.orm import DeclarativeBase
 
 class Base(DeclarativeBase):
     pass
+    # id = Column(INT, primary_key=True)
 
 
 class OrderItems(Base):
-    __tablename__ = 'orderItems'
+    __tablename__ = 'order_items'
     id = Column(INT, primary_key=True)
     order_id = Column(ForeignKey('orders.id', ondelete='CASCADE'), nullable=False)
     product_id = Column(ForeignKey('products.id', ondelete='CASCADE'), nullable=False)
